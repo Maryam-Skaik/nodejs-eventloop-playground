@@ -60,7 +60,7 @@ cd nodejs-eventloop-playground
 npm install
 ```
 
-`Requires Node.js 14+`
+> Requires Node.js 14+
 
 ---
 
@@ -87,7 +87,7 @@ npm install
 node codes/demo-concurrency-pool.js
 ```
 
-`The helper script executes all demos sequentially and prints timing information for each.`
+> The helper script executes all demos sequentially and prints timing information for each.
 
 ---
 
@@ -149,4 +149,4 @@ This project is licensed under the MIT License
 
 Created by [**Maryam Skaik**](https://github.com/Maryam-Skaik)
 
-`“Understanding the event loop is understanding Node.js itself.”`
+> “Understanding the event loop is understanding Node.js itself.”
