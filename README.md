@@ -98,12 +98,45 @@ node codes/demo-concurrency-pool.js
 - Shows how tasks enter the call stack, then microtasks (`nextTick` + Promises) and finally macrotasks.
 - You can step through the event loop to see task ordering visually.
 
-**Clinic.js**
+## 🔬 Using Clinic.js for Profiling
 
-- Analyzes performance of each async task:
-    - Line length represents execution + waiting time
-    - Bubble size indicates heavy vs light tasks
-    - Tasks running concurrently appear on the same line
+Clinic.js helps you analyze the performance and visualize event loop delays in your Node.js code.
+It includes tools like `clinic doctor`, `clinic flame`, and `clinic bubbleprof`.
+
+### 📦 Installation
+
+```bash
+npm install -g clinic
+```
+
+### ▶️ Running with Clinic.js
+
+You can profile any demo from the `codes/` folder. Example:
+```bash
+# Run a demo with Bubbleprof visualizer
+npx clinic bubbleprof -- node codes/demo-concurrency-pool.js
+```
+Wait for the demo to finish, then press Ctrl + C to generate the report.
+
+### 📂 Viewing the Report
+After stopping the program, a `.clinic` folder will appear in your project directory.
+Open the generated HTML report automatically with:
+```bash
+npx clinic open ./clinic-bubbleprof-*.clinic
+```
+
+The interactive interface shows:
+
+- **Colored bubbles** = async operations
+- **Line length** = execution + waiting time
+- **Same-line bubbles** = tasks running concurrently
+- **Central vs outer bubbles** = depth in the event loop phases
+
+### 🧠 Tips
+
+- `clinic doctor` → quick overview of potential performance issues
+- `clinic flame` → highlights CPU hotspots (useful for CPU-bound demos)
+- `clinic bubbleprof` → perfect for understanding concurrency and I/O overlap
 
 ---
 
