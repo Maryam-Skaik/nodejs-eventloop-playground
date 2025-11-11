@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-eventloop-playground",
+  "version": "0.1.0",
+  "description": "Demos & visualizations for Node.js Event Loop, microtasks/macrotasks, NodeLoops & Clinic.",
+  "main": "",
+  "scripts": {
+    "demo:concurrency": "node codes/demo-concurrency-pool.js",
+    "demo:nexttick": "node codes/demo-nexttick-freeze.js",
+    "demo:promise-loop": "node codes/demo-promise-loop.js",
+    "demo:io-order": "node codes/demo-setImmediate-vs-timeout-io.js",
+    "demo:pbkdf2": "node codes/demo-threadpool-pbkdf2.js",
+    "clinic:doctor": "clinic doctor -- node codes/demo-concurrency-pool.js",
+    "clinic:flame": "clinic flame -- node codes/demo-threadpool-pbkdf2.js"
+  },
+  "devDependencies": {
+    "clinic": "^13.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
