@@ -23,6 +23,13 @@ The project also integrates:
 
 ---
 
+## 📌 Repository Purpose
+
+This repository is designed to provide a hands-on, visual understanding of Node.js asynchronous behavior, including microtasks, macrotasks, and the libuv thread pool.  
+It aims to help developers, students, and backend engineers explore the event loop, concurrency, and performance bottlenecks in a practical way.
+
+---
+
 ## 🧩 Repository Structure
 
 ```bash
@@ -49,6 +56,15 @@ nodejs-eventloop-playground/
 ```
 
 Each folder is self-contained and designed for both **learning** and **profiling real-world behavior**.
+
+---
+
+## ⚙️ Prerequisites
+
+- Node.js 14+ installed  
+- npm (Node Package Manager)  
+- Optional: Clinic.js installed globally for profiling demos (`npm install -g clinic`)  
+- Recommended: NodeLoops Visualizer available via browser
 
 ---
 
